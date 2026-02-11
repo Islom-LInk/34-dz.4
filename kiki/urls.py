@@ -18,8 +18,13 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
+from apps.bolot.views import base,homepage,sierra,urmat
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("", base, name ="base-page"),
+    path("homepage/",homepage, name = "homepage-page"),
+    path("islom/",sierra,name="sierra-page"),
+    path("urmat/",urmat,name="urmat-page"),
 ]
 urlpatterns += static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
