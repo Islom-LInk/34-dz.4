@@ -1,5 +1,5 @@
 from django.contrib import admin
-from apps.bolot.models import CompanyInfo
+from apps.bolot.models import MyInfo
 # Register your models here.
 
-admin.site.register(CompanyInfo)
+admin.site.register(MyInfo)

@@ -1,17 +1,13 @@
 from django.db import models
 
 # Create your models here.
-class CompanyInfo(models.Model):
-    name = models.CharField(max_length = 250,verbose_name = 'Название компании')
-    about = models.TextField(verbose_name = 'Описание компании')
-    logo = models.ImageField(verbose_name  = 'логотип компании')
-    address = models.CharField(max_length = 250, verbose_name = 'адрес компании')
-    email = models.EmailField(verbose_name = 'контактный email')
-    phone = models.CharField(max_length=50,verbose_name="Телефон")
-    working_hours  = models.CharField(max_length=100,verbose_name="Время работы")
-
-
+class MyInfo(models.Model):
+    name = models.CharField(max_length=100,verbose_name="Имя пользователя")
+    photo = models.ImageField(verbose_name="Фото")
+    profession = models.CharField(max_length=100,verbose_name="Профессия")
+    age = models.IntegerField(verbose_name="Возраст")
 
     class Meta:
-        verbose_name = "Информация о компании"
-        verbose_name_plural = "Информация о компании"
+        verbose_name = "Моя информация"
+        verbose_name_plural = "Моя информация"
+
